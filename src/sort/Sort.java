@@ -20,20 +20,20 @@ public class Sort {
         shellSort(dst);*/
 
         //힙정렬
-       /* int size = (int) Math.pow(2,5);
+        /*int size = (int) Math.pow(2,18);
         int[] arr = new int[size];
 
         //Random r = new Random();
 
         int k = arr.length;
         for(int i = 0; i < k; i++){
-            arr[i] = k - i;
+            arr[i] = i + 1;
         }
         int[] dst = arr.clone();
         heapSort(dst);*/
 
         //선택정렬
-        /*int size = (int) Math.pow(2,5);
+        int size = (int) Math.pow(2,20);
         int[] arr = new int[size];
 
         Random r = new Random();
@@ -43,21 +43,21 @@ public class Sort {
             arr[i] = r.nextInt();
         }
         int[] dst = arr.clone();
-        selectionSort(dst);*/
+        selectionSort(dst);
 
         /*for(int i = 0; i < dst.length; i++){
             System.out.printf("%3d ", dst[i]);
         }*/
 
         //버블정렬
-        /*int size = (int) Math.pow(2,5);
+        /*int size = (int) Math.pow(2,20);
         int[] arr = new int[size];
 
-        //Random r = new Random();
+        Random r = new Random();
 
         int k = arr.length;
         for(int i = 0; i < k; i++){
-            arr[i] = i + 1;
+            arr[i] = r.nextInt();
         }
         int[] dst = arr.clone();
         bubleSort(dst);*/
@@ -84,7 +84,7 @@ public class Sort {
         }*/
 
         //퀵정렬
-        int size = (int) Math.pow(2,20);
+        /*int size = (int) Math.pow(2,20);
         int[] arr = new int[size];
 
         Random r = new Random();
@@ -94,40 +94,15 @@ public class Sort {
             arr[i] = r.nextInt();
         }
         int[] dst = arr.clone();
-        quickSort(dst,0,dst.length - 1);
+        quickSort(dst,0,dst.length - 1);*/
 
         /*for(int i = 0; i < dst.length; i++){
             System.out.printf("%3d ", dst[i]);
         }*/
 
-
-        /*int size = (int) Math.pow(2,20);
-        Integer[] arr = new Integer[size];
-        int k = arr.length;
-
-        for(int i = 0; i < k; i++){
-            arr[i] = k - i;
-        }
-        Sort<Integer> sort = new BubbleSort<>();
-
-        Integer[] res = sort.sort(arr, (x,y)-> {
-            if (x < y) return -1;
-            if (x > y) return 1;
-            return 0;
-        });*/
-
-
-
-        /*ArrayList<Integer> aList = new ArrayList<>();
-        aList.addAll(Arrays.asList(arr));
-
-        aList = (ArrayList<Integer>) quicksort(aList);
-        System.out.println(aList);*/
-
         long endTime = System.nanoTime();
         System.out.println("running time: " + (endTime - startTime) + " ns");
     }
-
 
     private static void quickSort(int[] arr,int start, int end) {
         int part=partition(arr,start,end);
